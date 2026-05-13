@@ -1,0 +1,1025 @@
+[
+  {
+    "topic": "Configuration & Setup",
+    "question": "Where would an administrator configure the company's fiscal year if it does not follow the standard calendar year?",
+    "options": [
+      "Company Information",
+      "Fiscal Year Settings",
+      "Business Hours",
+      "Currency Management"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Configuration & Setup",
+    "question": "An administrator needs to allow users to log in only during business hours. Which setting should be configured?",
+    "options": [
+      "Session Settings",
+      "Login Flows",
+      "Login Hours on the Profile",
+      "Password Policies"
+    ],
+    "answer": 2
+  },
+  {
+    "topic": "Configuration & Setup",
+    "question": "Which feature allows an administrator to see a log of all recent setup changes made in the org?",
+    "options": [
+      "Debug Logs",
+      "Setup Audit Trail",
+      "Event Monitoring",
+      "Field History Tracking"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Configuration & Setup",
+    "question": "An administrator wants to allow users to log in from only specific IP addresses. Where is this configured?",
+    "options": [
+      "Network Access under Security Controls",
+      "Profile Login IP Ranges",
+      "Trusted IP Ranges in Session Settings",
+      "Both A and B"
+    ],
+    "answer": 3
+  },
+  {
+    "topic": "Configuration & Setup",
+    "question": "What is the maximum number of active picklist values allowed per picklist field in Salesforce?",
+    "options": ["500", "1,000", "5,000", "10,000"],
+    "answer": 1
+  },
+  {
+    "topic": "Configuration & Setup",
+    "question": "An administrator wants to require users to reset their password every 90 days. Where is this configured?",
+    "options": [
+      "User Settings",
+      "Security Controls > Password Policies",
+      "Profile Settings",
+      "Identity Verification"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Configuration & Setup",
+    "question": "Which of the following is NOT a standard Salesforce license type?",
+    "options": [
+      "Salesforce",
+      "Salesforce Platform",
+      "Force.com Free",
+      "Salesforce Analytics"
+    ],
+    "answer": 3
+  },
+  {
+    "topic": "Configuration & Setup",
+    "question": "An organization wants to enable multi-currency support. What is a key consideration?",
+    "options": [
+      "Multi-currency cannot be disabled once enabled",
+      "Multi-currency is only available in Enterprise Edition",
+      "It requires an additional license per user",
+      "It can only support up to 10 currencies"
+    ],
+    "answer": 0
+  },
+  {
+    "topic": "Configuration & Setup",
+    "question": "What is the purpose of a Salesforce 'Sandbox'?",
+    "options": [
+      "To store archived data",
+      "To provide a testing environment separate from production",
+      "To host public-facing communities",
+      "To manage AppExchange installations"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Configuration & Setup",
+    "question": "Which sandbox type provides the most storage and a full copy of production data?",
+    "options": [
+      "Developer Sandbox",
+      "Developer Pro Sandbox",
+      "Partial Copy Sandbox",
+      "Full Sandbox"
+    ],
+    "answer": 3
+  },
+
+  {
+    "topic": "Object Manager & Lightning App Builder",
+    "question": "Which relationship type should be used when a child record must always have a parent and the child's sharing is controlled by the parent?",
+    "options": [
+      "Lookup Relationship",
+      "External Lookup",
+      "Master-Detail Relationship",
+      "Hierarchical Relationship"
+    ],
+    "answer": 2
+  },
+  {
+    "topic": "Object Manager & Lightning App Builder",
+    "question": "An administrator wants to show a sum of all related child records on the parent. Which field type is required?",
+    "options": [
+      "Formula Field",
+      "Roll-Up Summary Field",
+      "Cross-Object Formula",
+      "Lookup Field"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Object Manager & Lightning App Builder",
+    "question": "What happens to child records when a Master-Detail parent record is deleted?",
+    "options": [
+      "Child records remain with no parent",
+      "Child records are re-parented to a default record",
+      "Child records are also deleted",
+      "Deletion is blocked if children exist"
+    ],
+    "answer": 2
+  },
+  {
+    "topic": "Object Manager & Lightning App Builder",
+    "question": "Which tool allows administrators to visually explore object relationships in Salesforce?",
+    "options": [
+      "Data Loader",
+      "Schema Builder",
+      "Object Manager",
+      "Flow Builder"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Object Manager & Lightning App Builder",
+    "question": "A company uses a custom object for Projects. They need opportunities linked to multiple projects and projects linked to multiple opportunities. What is the best approach?",
+    "options": [
+      "Create a Lookup on Opportunity to Project",
+      "Create a Master-Detail from Project to Opportunity",
+      "Create a Junction Object with two Master-Detail relationships",
+      "Use a Many-to-Many formula field"
+    ],
+    "answer": 2
+  },
+  {
+    "topic": "Object Manager & Lightning App Builder",
+    "question": "What is the maximum number of Master-Detail relationships a custom object can have?",
+    "options": ["1", "2", "3", "5"],
+    "answer": 1
+  },
+  {
+    "topic": "Object Manager & Lightning App Builder",
+    "question": "An administrator needs to display different page layouts to different users based on their profile. What should be used?",
+    "options": [
+      "Record Types",
+      "Permission Sets",
+      "Field Sets",
+      "Dynamic Forms"
+    ],
+    "answer": 0
+  },
+  {
+    "topic": "Object Manager & Lightning App Builder",
+    "question": "Which Lightning App Builder component allows a field to only appear on a page if a specific condition is met?",
+    "options": [
+      "Dynamic Actions",
+      "Record Types",
+      "Visibility Filters / Component Visibility",
+      "Flow Screen"
+    ],
+    "answer": 2
+  },
+  {
+    "topic": "Object Manager & Lightning App Builder",
+    "question": "An administrator deletes a custom field that is referenced in a workflow rule. What happens?",
+    "options": [
+      "The field is permanently deleted immediately",
+      "The field is placed in a recycle bin for 15 days",
+      "Salesforce prevents deletion until the reference is removed",
+      "The workflow rule is automatically deactivated"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Object Manager & Lightning App Builder",
+    "question": "What is the maximum number of custom objects allowed in Enterprise Edition?",
+    "options": ["200", "400", "2,000", "Unlimited"],
+    "answer": 2
+  },
+
+  {
+    "topic": "Security & Access",
+    "question": "What controls the baseline level of access that all users have to each other's records?",
+    "options": [
+      "Profiles",
+      "Permission Sets",
+      "Organization-Wide Defaults (OWD)",
+      "Role Hierarchy"
+    ],
+    "answer": 2
+  },
+  {
+    "topic": "Security & Access",
+    "question": "A user needs temporary access to a feature not included in their profile. What is the best approach?",
+    "options": [
+      "Create a new profile for the user",
+      "Assign a Permission Set",
+      "Change the user's role",
+      "Modify the OWD settings"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Security & Access",
+    "question": "Which access model only opens up record access and never restricts it beyond OWD?",
+    "options": [
+      "Profiles",
+      "Role Hierarchy and Sharing Rules",
+      "Field-Level Security",
+      "Validation Rules"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Security & Access",
+    "question": "A manager needs to see all records owned by users below them in the role hierarchy. Which feature enables this?",
+    "options": [
+      "Sharing Rules",
+      "Role Hierarchy",
+      "Manual Sharing",
+      "Public Groups"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Security & Access",
+    "question": "Which sharing rule type shares records based on field values of the record itself?",
+    "options": [
+      "Owner-Based Sharing Rule",
+      "Criteria-Based Sharing Rule",
+      "Manual Sharing Rule",
+      "Apex Sharing Rule"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Security & Access",
+    "question": "An admin needs to ensure a specific field is never visible to a group of users, regardless of page layout. What should be configured?",
+    "options": [
+      "Remove the field from the page layout",
+      "Set Field-Level Security to Hidden on the Profile",
+      "Delete the field from the object",
+      "Use a validation rule to block the field"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Security & Access",
+    "question": "Which of the following is TRUE about Profiles?",
+    "options": [
+      "A user can have multiple profiles",
+      "Profiles can be used to grant temporary permissions",
+      "Each user must be assigned exactly one profile",
+      "Profiles can only control object-level access"
+    ],
+    "answer": 2
+  },
+  {
+    "topic": "Security & Access",
+    "question": "An administrator wants to restrict all users from accessing Salesforce outside of a specific IP range. What is the most secure configuration?",
+    "options": [
+      "Set Login IP Ranges on each Profile",
+      "Configure Trusted IP Ranges only",
+      "Use Network Access under Security Controls",
+      "Enable Login Flows for all users"
+    ],
+    "answer": 0
+  },
+  {
+    "topic": "Security & Access",
+    "question": "What is the purpose of the 'Grant Login Access' feature?",
+    "options": [
+      "To allow an admin to log in as another user for debugging",
+      "To grant API access to a third-party application",
+      "To allow a user to share their password with a colleague",
+      "To temporarily elevate a user's profile permissions"
+    ],
+    "answer": 0
+  },
+  {
+    "topic": "Security & Access",
+    "question": "Which permission allows a user to view and edit all records in the org, regardless of sharing settings?",
+    "options": [
+      "Manage All Data",
+      "View All Data",
+      "Modify All Data",
+      "View All Records"
+    ],
+    "answer": 2
+  },
+
+  {
+    "topic": "Data & Analytics Management",
+    "question": "Which tool should be used to import more than 50,000 records into Salesforce?",
+    "options": [
+      "Data Import Wizard",
+      "Data Loader",
+      "Mass Transfer Tool",
+      "Workbench"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Data & Analytics Management",
+    "question": "A report needs to show the total Opportunity amount grouped by Account. Which report type should be used?",
+    "options": [
+      "Tabular Report",
+      "Summary Report",
+      "Matrix Report",
+      "Joined Report"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Data & Analytics Management",
+    "question": "Which report format allows grouping by both rows and columns simultaneously?",
+    "options": ["Tabular", "Summary", "Matrix", "Joined"],
+    "answer": 2
+  },
+  {
+    "topic": "Data & Analytics Management",
+    "question": "What is the maximum number of records displayed in a standard Salesforce report?",
+    "options": ["1,000", "2,000", "5,000", "50,000"],
+    "answer": 1
+  },
+  {
+    "topic": "Data & Analytics Management",
+    "question": "An administrator wants to prevent duplicate Account records from being created. What feature should be used?",
+    "options": [
+      "Validation Rules",
+      "Duplicate Management with Matching Rules",
+      "Workflow Rules",
+      "Unique Field Constraint only"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Data & Analytics Management",
+    "question": "Which field type should be used to capture a unique external system identifier for each record?",
+    "options": ["Auto Number", "Text (Unique)", "External ID", "Formula"],
+    "answer": 2
+  },
+  {
+    "topic": "Data & Analytics Management",
+    "question": "What is the maximum number of components that can be added to a single Salesforce Dashboard?",
+    "options": ["10", "20", "25", "Unlimited"],
+    "answer": 1
+  },
+  {
+    "topic": "Data & Analytics Management",
+    "question": "A dashboard chart shows data as of the last refresh time. A user wants to always see real-time data. What should the admin configure?",
+    "options": [
+      "Enable Dynamic Dashboards",
+      "Schedule the dashboard to refresh every minute",
+      "Use a Report Chart on the page layout instead",
+      "Check 'Always run as viewer' in dashboard settings"
+    ],
+    "answer": 0
+  },
+  {
+    "topic": "Data & Analytics Management",
+    "question": "Which Data Loader operation should be used to insert new records AND update existing records in the same operation?",
+    "options": ["Insert", "Update", "Upsert", "Merge"],
+    "answer": 2
+  },
+  {
+    "topic": "Data & Analytics Management",
+    "question": "What is the maximum number of fields that can be tracked for Field History Tracking per object?",
+    "options": ["10", "20", "40", "100"],
+    "answer": 2
+  },
+  {
+    "topic": "Data & Analytics Management",
+    "question": "Which feature allows an administrator to subscribe to a report and receive it via email on a schedule?",
+    "options": [
+      "Report Snapshot",
+      "Report Subscription / Schedule Report",
+      "Dashboard Refresh Notification",
+      "Chatter Report Post"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Data & Analytics Management",
+    "question": "How long are deleted records retained in the Salesforce Recycle Bin?",
+    "options": ["7 days", "15 days", "30 days", "45 days"],
+    "answer": 2
+  },
+
+  {
+    "topic": "Sales & Marketing Applications",
+    "question": "Which standard object is used to track potential customers before they are qualified?",
+    "options": ["Account", "Contact", "Lead", "Opportunity"],
+    "answer": 2
+  },
+  {
+    "topic": "Sales & Marketing Applications",
+    "question": "When a Lead is converted in Salesforce, which records can be created automatically?",
+    "options": [
+      "Account, Contact, and Opportunity",
+      "Account and Contact only",
+      "Contact and Opportunity only",
+      "Account, Contact, Opportunity, and Case"
+    ],
+    "answer": 0
+  },
+  {
+    "topic": "Sales & Marketing Applications",
+    "question": "What is the purpose of the 'Path' feature in Salesforce?",
+    "options": [
+      "To automate record creation based on stage changes",
+      "To provide visual guidance and key fields at each stage of a record's lifecycle",
+      "To define the routing of approval requests",
+      "To map data during import"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Sales & Marketing Applications",
+    "question": "A sales rep wants to log a call made to a contact. Which activity should they use?",
+    "options": ["Task", "Event", "Log a Call (Completed Task)", "Email"],
+    "answer": 2
+  },
+  {
+    "topic": "Sales & Marketing Applications",
+    "question": "Which Salesforce feature allows sales teams to assign leads to specific queues based on criteria like geography or product interest?",
+    "options": [
+      "Assignment Rules",
+      "Escalation Rules",
+      "Auto-Response Rules",
+      "Territory Management"
+    ],
+    "answer": 0
+  },
+  {
+    "topic": "Sales & Marketing Applications",
+    "question": "What is the purpose of 'Opportunity Forecast Categories' in Salesforce?",
+    "options": [
+      "To categorize opportunities by revenue size",
+      "To group opportunities by likelihood of closing for forecasting",
+      "To track the source of the opportunity",
+      "To assign opportunities to forecast managers"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Sales & Marketing Applications",
+    "question": "Which object stores the products or services that a company sells in Salesforce?",
+    "options": [
+      "Assets",
+      "Price Books",
+      "Products (Product2)",
+      "Catalog Items"
+    ],
+    "answer": 2
+  },
+  {
+    "topic": "Sales & Marketing Applications",
+    "question": "What is a 'Campaign Influence' in Salesforce?",
+    "options": [
+      "A metric showing how many leads a campaign generated",
+      "A feature that attributes revenue credit to campaigns that touched an opportunity",
+      "The budget allocated to a marketing campaign",
+      "A report showing campaign ROI"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Sales & Marketing Applications",
+    "question": "An administrator wants to automatically send a welcome email when a new Lead is created from the website. Which feature should be used?",
+    "options": [
+      "Workflow Rule with Email Alert",
+      "Auto-Response Rules",
+      "Process Builder Email Action",
+      "Email Templates only"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Sales & Marketing Applications",
+    "question": "Which Salesforce feature allows administrators to define different sales stages for different types of opportunities?",
+    "options": [
+      "Opportunity Path",
+      "Record Types with Sales Process",
+      "Stage Picklist customization",
+      "Forecast Types"
+    ],
+    "answer": 1
+  },
+
+  {
+    "topic": "Service & Support Applications",
+    "question": "Which feature automatically escalates a Case if it has not been responded to within a defined time period?",
+    "options": [
+      "Assignment Rules",
+      "Auto-Response Rules",
+      "Escalation Rules",
+      "Entitlement Processes"
+    ],
+    "answer": 2
+  },
+  {
+    "topic": "Service & Support Applications",
+    "question": "A customer emails support@company.com. Salesforce automatically creates a Case. Which feature enables this?",
+    "options": [
+      "Web-to-Case",
+      "Email-to-Case",
+      "Case Assignment Rules",
+      "Customer Portal"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Service & Support Applications",
+    "question": "What is the purpose of 'Entitlements' in Salesforce Service Cloud?",
+    "options": [
+      "To define the products a customer is entitled to buy",
+      "To define the level of support a customer is entitled to receive (SLAs)",
+      "To restrict case creation to entitled users only",
+      "To track customer satisfaction scores"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Service & Support Applications",
+    "question": "Which object in Salesforce stores reusable answers to common customer questions?",
+    "options": [
+      "Knowledge Articles",
+      "Solutions",
+      "FAQ Records",
+      "Case Comments"
+    ],
+    "answer": 0
+  },
+  {
+    "topic": "Service & Support Applications",
+    "question": "A support agent wants to see all open cases assigned to their queue. Where should the administrator direct the agent to look?",
+    "options": [
+      "My Cases list view",
+      "Queue list view in the Cases tab",
+      "Reports tab",
+      "Service Console"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Service & Support Applications",
+    "question": "Which feature allows customers to submit cases through a website form without logging in?",
+    "options": [
+      "Email-to-Case",
+      "Web-to-Case",
+      "Self-Service Portal",
+      "Experience Cloud"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Service & Support Applications",
+    "question": "What is the 'Omni-Channel' feature in Salesforce?",
+    "options": [
+      "A feature for sending marketing emails across multiple channels",
+      "A tool that routes work items (cases, chats, etc.) to the most available and qualified agents",
+      "A multi-language support feature for knowledge articles",
+      "A dashboard for monitoring all service channels"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Service & Support Applications",
+    "question": "A Case has been open for 48 hours without resolution. The admin wants an email automatically sent to a manager. Which feature handles this?",
+    "options": [
+      "Case Assignment Rules",
+      "Escalation Rules with Email Alert",
+      "Workflow Rule on Case",
+      "Entitlement Milestone Action"
+    ],
+    "answer": 1
+  },
+
+  {
+    "topic": "Productivity & Collaboration",
+    "question": "Which Salesforce feature allows users to follow records and receive updates in a feed?",
+    "options": [
+      "Salesforce Tasks",
+      "Chatter",
+      "Einstein Activity Capture",
+      "Email Alerts"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Productivity & Collaboration",
+    "question": "An administrator wants to create a standardized set of tasks that should be completed for every new Opportunity. Which feature is best?",
+    "options": [
+      "Task Rules",
+      "Activity Timeline",
+      "Task List",
+      "Chatter Groups"
+    ],
+    "answer": 0
+  },
+  {
+    "topic": "Productivity & Collaboration",
+    "question": "Which feature allows a user to send a document to multiple people for electronic signature using AppExchange?",
+    "options": [
+      "Salesforce Files",
+      "DocuSign (AppExchange)",
+      "Chatter Files",
+      "Content Libraries"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Productivity & Collaboration",
+    "question": "What is the purpose of a 'Quick Action' in Salesforce?",
+    "options": [
+      "A shortcut to run a report",
+      "A way to perform common tasks quickly such as creating records or logging calls from a record page",
+      "A trigger that fires on record save",
+      "A button that launches a flow"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Productivity & Collaboration",
+    "question": "Which Einstein feature suggests the next best action a sales rep should take based on CRM data?",
+    "options": [
+      "Einstein Lead Scoring",
+      "Einstein Next Best Action",
+      "Einstein Opportunity Insights",
+      "Einstein Analytics"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Productivity & Collaboration",
+    "question": "What is the purpose of 'Salesforce Inbox'?",
+    "options": [
+      "A dedicated email client replacing Outlook",
+      "A set of productivity tools integrating Salesforce with email and calendar applications",
+      "An inbox for Chatter notifications only",
+      "A ticketing system for internal IT requests"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Productivity & Collaboration",
+    "question": "Which type of Chatter group restricts membership to invited members only and hides the group from search?",
+    "options": [
+      "Public Group",
+      "Private Group",
+      "Unlisted Group",
+      "Broadcast-Only Group"
+    ],
+    "answer": 2
+  },
+  {
+    "topic": "Productivity & Collaboration",
+    "question": "An administrator wants to let users access Salesforce data directly within Microsoft Outlook. Which product enables this?",
+    "options": [
+      "Salesforce for Outlook (legacy)",
+      "Einstein Activity Capture",
+      "Salesforce Inbox / Outlook Integration",
+      "AppExchange Outlook Connector"
+    ],
+    "answer": 2
+  },
+
+  {
+    "topic": "Automation",
+    "question": "Which Salesforce automation tool is the recommended replacement for both Workflow Rules and Process Builder?",
+    "options": [
+      "Apex Triggers",
+      "Flow Builder",
+      "Lightning Components",
+      "Assignment Rules"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Automation",
+    "question": "Which type of Flow runs in the background without a user interface and is triggered by a record change?",
+    "options": [
+      "Screen Flow",
+      "Schedule-Triggered Flow",
+      "Record-Triggered Flow",
+      "Autolaunched Flow"
+    ],
+    "answer": 2
+  },
+  {
+    "topic": "Automation",
+    "question": "What is an Approval Process used for in Salesforce?",
+    "options": [
+      "Automating field updates without human intervention",
+      "Routing a record to one or more approvers before it can move to a certain state",
+      "Sending scheduled emails to users",
+      "Validating data before a record is saved"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Automation",
+    "question": "An administrator wants a field to auto-update to 'Closed' when the related Case Status changes to 'Resolved'. Which tool is MOST appropriate today?",
+    "options": [
+      "Workflow Rule – Field Update",
+      "Process Builder",
+      "Record-Triggered Flow",
+      "Validation Rule"
+    ],
+    "answer": 2
+  },
+  {
+    "topic": "Automation",
+    "question": "Which automation feature runs on a set schedule, regardless of record changes?",
+    "options": [
+      "Record-Triggered Flow",
+      "Scheduled Flow (Schedule-Triggered Flow)",
+      "Apex Batch",
+      "Time-Based Workflow"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Automation",
+    "question": "What is the purpose of a Validation Rule?",
+    "options": [
+      "To automatically populate fields based on conditions",
+      "To prevent a record from being saved if specified criteria are not met",
+      "To route records for approval",
+      "To send email notifications when a record changes"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Automation",
+    "question": "An admin sets up an approval process where any one of three designated managers can approve a request. Which routing type is this?",
+    "options": [
+      "Unanimous Approval",
+      "Sequential Approval",
+      "Any one approver from queue or group",
+      "Delegated Approval"
+    ],
+    "answer": 2
+  },
+
+  {
+    "topic": "Agentforce AI",
+    "question": "What is Agentforce in Salesforce?",
+    "options": [
+      "A chatbot tool for internal IT helpdesks only",
+      "An advanced AI platform that deploys autonomous agents to handle complex business operations across sales, service, and more",
+      "A reporting tool powered by Einstein Analytics",
+      "A feature for building custom Lightning components using AI"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Agentforce AI",
+    "question": "Which tool in Salesforce is used to build and configure Agentforce agents?",
+    "options": [
+      "Flow Builder",
+      "Agent Builder",
+      "Einstein Studio",
+      "AI Console"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Agentforce AI",
+    "question": "What controls what an Agentforce agent is allowed to do and what data it can access?",
+    "options": [
+      "Agent Profiles",
+      "Agent Permissions and Topics",
+      "OWD Settings only",
+      "Einstein Permission Sets"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Agentforce AI",
+    "question": "Which Einstein feature assigns a score to Leads based on their likelihood to convert?",
+    "options": [
+      "Einstein Opportunity Scoring",
+      "Einstein Lead Scoring",
+      "Einstein Activity Capture",
+      "Einstein Prediction Builder"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Agentforce AI",
+    "question": "An administrator wants to use AI to summarize a long email thread on a Case automatically. Which Agentforce / Einstein feature supports this?",
+    "options": [
+      "Einstein GPT Case Summarization",
+      "Einstein Next Best Action",
+      "Flow AI Decision",
+      "Einstein Analytics Summary"
+    ],
+    "answer": 0
+  },
+  {
+    "topic": "Agentforce AI",
+    "question": "What is a 'Prompt Template' in the context of Agentforce?",
+    "options": [
+      "A pre-built email template with merge fields",
+      "A reusable, configurable instruction set used to ground AI outputs with Salesforce data",
+      "A Flow template that uses AI decision elements",
+      "A Knowledge Article template for AI-generated content"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Agentforce AI",
+    "question": "Which principle ensures that Salesforce's AI features respect existing sharing and security rules when accessing data?",
+    "options": [
+      "Einstein Trust Layer",
+      "Data Masking Policy",
+      "AI Governance Framework",
+      "Prompt Security Controls"
+    ],
+    "answer": 0
+  },
+  {
+    "topic": "Agentforce AI",
+    "question": "An admin is setting up an Agentforce service agent. Which object defines what the agent can discuss and what actions it can take?",
+    "options": [
+      "Agent Profile",
+      "Agent Topics and Actions",
+      "Agent Permission Sets",
+      "Service Channel Configuration"
+    ],
+    "answer": 1
+  },
+
+  {
+    "topic": "User Management",
+    "question": "An employee leaves the company. What is the recommended action for their Salesforce user account?",
+    "options": [
+      "Delete the user",
+      "Freeze and then deactivate the user",
+      "Reassign the user to a different role",
+      "Reset the user's password and revoke session"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "User Management",
+    "question": "What happens to records owned by a deactivated user in Salesforce?",
+    "options": [
+      "Records are deleted automatically",
+      "Records remain and are still owned by the deactivated user",
+      "Records are transferred to the system admin",
+      "Records are moved to a default queue"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "User Management",
+    "question": "An administrator needs to give a contractor access to a limited set of features without creating a full Salesforce user license. Which license type is most cost-effective?",
+    "options": [
+      "Salesforce Platform License",
+      "Chatter Free License",
+      "Identity License",
+      "Community (Experience Cloud) License"
+    ],
+    "answer": 0
+  },
+  {
+    "topic": "User Management",
+    "question": "Which feature allows groups of permissions to be bundled together and assigned to multiple users regardless of their profile?",
+    "options": [
+      "Permission Set Groups",
+      "Role Hierarchy",
+      "Public Groups",
+      "Delegated Administration"
+    ],
+    "answer": 0
+  },
+  {
+    "topic": "User Management",
+    "question": "What is 'Delegated Administration' in Salesforce?",
+    "options": [
+      "Allowing managers to approve their team's records",
+      "Granting non-admin users limited administrative rights to manage users and certain configurations",
+      "Delegating report creation to power users",
+      "Allowing a user to log in as another user"
+    ],
+    "answer": 1
+  },
+
+  {
+    "topic": "Object Manager & Lightning App Builder",
+    "question": "Which formula function returns the current date and time in Salesforce?",
+    "options": ["TODAY()", "NOW()", "DATEVALUE()", "DATETIME()"],
+    "answer": 1
+  },
+  {
+    "topic": "Object Manager & Lightning App Builder",
+    "question": "An administrator wants a field to display the number of days since a record was created. Which field type should be used?",
+    "options": [
+      "Date Field",
+      "Number Field",
+      "Formula Field (Number)",
+      "Roll-Up Summary"
+    ],
+    "answer": 2
+  },
+  {
+    "topic": "Configuration & Setup",
+    "question": "Which AppExchange listing type allows administrators to install a complete set of Salesforce configurations (objects, fields, flows) packaged by a third party?",
+    "options": [
+      "Components",
+      "Managed Packages",
+      "Lightning Bolt Solutions",
+      "Data Services"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Data & Analytics Management",
+    "question": "What type of report would an administrator build to compare Opportunity amounts by both Region and Quarter simultaneously?",
+    "options": [
+      "Summary Report",
+      "Tabular Report",
+      "Matrix Report",
+      "Joined Report"
+    ],
+    "answer": 2
+  },
+  {
+    "topic": "Sales & Marketing Applications",
+    "question": "Which standard Salesforce object tracks the revenue and relationship between Products and Opportunities?",
+    "options": [
+      "Product",
+      "Price Book Entry",
+      "Opportunity Line Item",
+      "Quote Line Item"
+    ],
+    "answer": 2
+  },
+  {
+    "topic": "Security & Access",
+    "question": "A set of users across different roles all need Read access to Accounts owned by a specific team. What is the most scalable solution?",
+    "options": [
+      "Give each user a separate sharing rule",
+      "Create a Public Group and apply a Sharing Rule for Account access",
+      "Change the OWD for Accounts to Public Read Only",
+      "Add each user to the Account team manually"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Automation",
+    "question": "Which Salesforce feature allows you to send an outbound HTTP request to an external system from a Flow?",
+    "options": [
+      "Workflow Outbound Message",
+      "Flow HTTP Callout (External Service)",
+      "Apex Web Service",
+      "Process Builder Integration"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Service & Support Applications",
+    "question": "What is the purpose of a 'Macro' in Salesforce Service Cloud?",
+    "options": [
+      "To automate data imports into the org",
+      "To run a series of instructions on a record with a single click, saving agents time on repetitive tasks",
+      "To schedule automated case escalations",
+      "To create reusable Flow sub-flows"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Agentforce AI",
+    "question": "Which of the following best describes the 'Einstein Trust Layer'?",
+    "options": [
+      "A set of API rate limits applied to Einstein API calls",
+      "A security architecture ensuring AI respects data privacy, masking sensitive data in prompts and not retaining data for training",
+      "A dashboard for monitoring AI model performance",
+      "A certification required to use Agentforce features"
+    ],
+    "answer": 1
+  },
+  {
+    "topic": "Productivity & Collaboration",
+    "question": "Which Salesforce feature allows an admin to display a report chart directly on a record's Lightning page?",
+    "options": [
+      "Dashboard Component",
+      "Report Chart Component on Lightning App Builder",
+      "Embedded Analytics",
+      "Einstein Discovery Widget"
+    ],
+    "answer": 1
+  }
+]

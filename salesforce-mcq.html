@@ -1,0 +1,701 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salesforce MCQ Quiz</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --bg: #0a0e1a;
+        --surface: #111827;
+        --card: #161d2e;
+        --border: #1e2d45;
+        --accent: #00aaff;
+        --accent2: #0066cc;
+        --highlight-bg: #001e3c;
+        --highlight-border: #00aaff;
+        --highlight-glow: rgba(0, 170, 255, 0.18);
+        --text: #e2e8f0;
+        --muted: #64748b;
+        --option-hover: #1a2840;
+        --selected: #003366;
+        --selected-border: #0080ff;
+        --correct: #00c96e;
+        --wrong: #ff4d6d;
+        --radius: 12px;
+        --font: "Sora", sans-serif;
+        --mono: "JetBrains Mono", monospace;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--font);
+        min-height: 100vh;
+        padding-bottom: 100px;
+      }
+
+      /* ─── Header ─── */
+      header {
+        background: linear-gradient(135deg, #001f40 0%, #0a0e1a 60%);
+        border-bottom: 1px solid var(--border);
+        padding: 22px 32px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        backdrop-filter: blur(12px);
+      }
+
+      .sf-logo {
+        width: 38px;
+        height: 38px;
+        background: linear-gradient(135deg, #00aaff, #0055cc);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: 700;
+        color: #fff;
+        flex-shrink: 0;
+      }
+
+      header h1 {
+        font-size: 1.15rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: #fff;
+      }
+
+      header span {
+        font-family: var(--mono);
+        font-size: 0.7rem;
+        color: var(--accent);
+        background: rgba(0, 170, 255, 0.1);
+        border: 1px solid rgba(0, 170, 255, 0.25);
+        padding: 3px 10px;
+        border-radius: 20px;
+        margin-left: auto;
+      }
+
+      /* ─── Progress bar ─── */
+      .progress-wrap {
+        height: 3px;
+        background: var(--border);
+        position: sticky;
+        top: 83px;
+        z-index: 49;
+      }
+
+      .progress-bar {
+        height: 100%;
+        background: linear-gradient(90deg, #00aaff, #0055ff);
+        transition: width 0.4s ease;
+        box-shadow: 0 0 10px rgba(0, 170, 255, 0.5);
+      }
+
+      /* ─── Stats bar ─── */
+      .stats {
+        display: flex;
+        gap: 10px;
+        padding: 14px 32px;
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        flex-wrap: wrap;
+      }
+
+      .stat-pill {
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        padding: 5px 14px;
+        border-radius: 20px;
+        border: 1px solid var(--border);
+        color: var(--muted);
+      }
+
+      .stat-pill span {
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      .stat-pill.active-pill {
+        border-color: var(--accent);
+        color: var(--accent);
+        background: rgba(0, 170, 255, 0.06);
+      }
+
+      .stat-pill.active-pill span {
+        color: var(--accent);
+      }
+
+      /* ─── Main content ─── */
+      main {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 32px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      /* ─── Question card ─── */
+      .question-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 24px;
+        transition:
+          border-color 0.3s,
+          box-shadow 0.3s,
+          background 0.3s,
+          transform 0.3s;
+        scroll-margin-top: 160px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .question-card::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: var(--border);
+        transition: background 0.3s;
+      }
+
+      .question-card.active {
+        background: var(--highlight-bg);
+        border-color: var(--highlight-border);
+        box-shadow:
+          0 0 0 1px var(--highlight-border),
+          0 8px 32px var(--highlight-glow);
+        transform: translateX(4px);
+      }
+
+      .question-card.active::before {
+        background: linear-gradient(180deg, #00aaff, #0055cc);
+      }
+
+      .question-card.answered {
+        border-color: #1a3a5c;
+      }
+
+      .question-card.answered::before {
+        background: var(--correct);
+      }
+
+      /* ─── Question header ─── */
+      .q-header {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        margin-bottom: 18px;
+      }
+
+      .q-num {
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        font-weight: 500;
+        color: var(--muted);
+        background: var(--border);
+        padding: 4px 10px;
+        border-radius: 6px;
+        white-space: nowrap;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      .question-card.active .q-num {
+        background: var(--accent);
+        color: #000;
+      }
+
+      .q-text {
+        font-size: 0.97rem;
+        font-weight: 600;
+        line-height: 1.6;
+        color: var(--text);
+      }
+
+      /* ─── Options ─── */
+      .options {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      @media (max-width: 600px) {
+        .options {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .option {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 16px;
+        border-radius: 8px;
+        border: 1px solid var(--border);
+        cursor: pointer;
+        transition: all 0.18s ease;
+        background: transparent;
+        color: var(--text);
+        font-family: var(--font);
+        font-size: 0.88rem;
+        text-align: left;
+        width: 100%;
+      }
+
+      .option:hover {
+        background: var(--option-hover);
+        border-color: #2a4a70;
+      }
+
+      .option.correct {
+        background: rgba(0, 201, 110, 0.1);
+        border-color: var(--correct);
+        color: var(--correct);
+      }
+
+      .option.wrong {
+        background: rgba(255, 77, 109, 0.08);
+        border-color: var(--wrong);
+        color: var(--wrong);
+      }
+
+      .opt-letter {
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        font-weight: 700;
+        width: 24px;
+        height: 24px;
+        border-radius: 6px;
+        background: var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .option.correct .opt-letter {
+        background: var(--correct);
+        color: #000;
+      }
+
+      .option.wrong .opt-letter {
+        background: var(--wrong);
+        color: #fff;
+      }
+
+      /* ─── Fixed Nav ─── */
+      .nav-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(10, 14, 26, 0.95);
+        backdrop-filter: blur(16px);
+        border-top: 1px solid var(--border);
+        padding: 14px 32px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        z-index: 100;
+      }
+
+      .nav-btn {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 28px;
+        border-radius: 10px;
+        border: 1px solid var(--border);
+        background: var(--surface);
+        color: var(--text);
+        font-family: var(--font);
+        font-size: 0.88rem;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .nav-btn.next-btn {
+        background: linear-gradient(135deg, #0066cc, #00aaff);
+        border-color: transparent;
+        color: #fff;
+      }
+
+      .nav-center {
+        font-family: var(--mono);
+        font-size: 0.78rem;
+        color: var(--muted);
+      }
+
+      .nav-center strong {
+        color: var(--accent);
+      }
+
+      /* ─── Jump dots ─── */
+      .jump-dots {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 260px;
+      }
+
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--border);
+        cursor: pointer;
+      }
+
+      .dot.current {
+        background: var(--accent);
+        transform: scale(1.4);
+      }
+
+      .dot.answered {
+        background: #1a6e3e;
+        border: 1px solid var(--correct);
+      }
+
+      @media (max-width: 640px) {
+        header {
+          padding: 16px;
+        }
+
+        .stats {
+          padding: 10px 16px;
+        }
+
+        main {
+          padding: 20px 12px;
+        }
+
+        .nav-bar {
+          padding: 12px 16px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="sf-logo">SF</div>
+      <h1>Salesforce Certification MCQ</h1>
+      <span id="scoreLabel">0 / 0 answered</span>
+    </header>
+
+    <div class="progress-wrap">
+      <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+    </div>
+
+    <div class="stats">
+      <div class="stat-pill">
+        Total <span id="totalCount">0</span> questions
+      </div>
+
+      <div class="stat-pill active-pill">
+        Current <span id="currentLabel">#1</span>
+      </div>
+
+      <div class="stat-pill">Answered <span id="answeredCount">0</span></div>
+
+      <div class="stat-pill">Remaining <span id="remainingCount">0</span></div>
+    </div>
+
+    <main id="quizContainer"></main>
+
+    <div class="nav-bar">
+      <button class="nav-btn prev-btn" id="prevBtn" onclick="navigate(-1)">
+        ← Previous
+      </button>
+
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 8px;
+        "
+      >
+        <div class="jump-dots" id="jumpDots"></div>
+
+        <div class="nav-center">
+          Question <strong id="navCurrent">1</strong> of
+          <strong id="navTotal">0</strong>
+        </div>
+      </div>
+
+      <button class="nav-btn next-btn" id="nextBtn" onclick="navigate(1)">
+        Next →
+      </button>
+    </div>
+
+    <script>
+      let questions = []
+      let currentIndex = 0
+      let userAnswers = []
+
+      // ─────────────────────────────────────────────
+      // Load Salesforce-Questions From JSON File
+      // ─────────────────────────────────────────────
+      async function loadQuestions() {
+        try {
+          const response = await fetch("./salesforce-questions.json")
+
+          if (!response.ok) {
+            throw new Error("Failed to load salesforce-questions.json")
+          }
+
+          questions = await response.json()
+
+          userAnswers = new Array(questions.length).fill(null)
+
+          document.getElementById("navTotal").textContent = questions.length
+
+          buildQuiz()
+        } catch (error) {
+          console.error(error)
+
+          document.getElementById("quizContainer").innerHTML = `
+            <div style="
+              background:#161d2e;
+              padding:24px;
+              border-radius:12px;
+              border:1px solid #ff4d6d;
+              color:#ff4d6d;
+              text-align:center;
+            ">
+              Failed to load questions.json
+            </div>
+          `
+        }
+      }
+
+      // ─────────────────────────────────────────────
+      // Build Quiz
+      // ─────────────────────────────────────────────
+      function buildQuiz() {
+        const container = document.getElementById("quizContainer")
+
+        container.innerHTML = ""
+
+        questions.forEach((q, i) => {
+          const card = document.createElement("div")
+
+          card.className = "question-card"
+          card.id = `q${i}`
+
+          const labels = ["A", "B", "C", "D"]
+
+          const optionsHTML = q.options
+            .map(
+              (opt, j) => `
+                <button 
+                  class="option"
+                  id="opt-${i}-${j}"
+                  onclick="selectOption(${i}, ${j})"
+                >
+                  <span class="opt-letter">${labels[j]}</span>
+                  ${opt}
+                </button>
+              `,
+            )
+            .join("")
+
+          card.innerHTML = `
+            <div class="q-header">
+              <span class="q-num">
+                Q${String(i + 1).padStart(2, "0")}
+              </span>
+
+              <p class="q-text">${q.question}</p>
+            </div>
+
+            <div class="options">
+              ${optionsHTML}
+            </div>
+          `
+
+          container.appendChild(card)
+        })
+
+        buildDots()
+        updateStats()
+        updateNav()
+        highlight(0)
+      }
+
+      // ─────────────────────────────────────────────
+      // Build Dots
+      // ─────────────────────────────────────────────
+      function buildDots() {
+        const wrap = document.getElementById("jumpDots")
+
+        wrap.innerHTML = ""
+
+        questions.forEach((_, i) => {
+          const dot = document.createElement("div")
+
+          dot.className = "dot"
+          dot.id = `dot-${i}`
+          dot.title = `Go to Q${i + 1}`
+
+          dot.onclick = () => goTo(i)
+
+          wrap.appendChild(dot)
+        })
+      }
+
+      // ─────────────────────────────────────────────
+      // Select Option
+      // ─────────────────────────────────────────────
+      function selectOption(qIdx, optIdx) {
+        userAnswers[qIdx] = optIdx
+
+        const q = questions[qIdx]
+
+        for (let j = 0; j < q.options.length; j++) {
+          const btn = document.getElementById(`opt-${qIdx}-${j}`)
+
+          btn.classList.remove("correct", "wrong")
+
+          if (j === optIdx) {
+            btn.classList.add(optIdx === q.answer ? "correct" : "wrong")
+          }
+
+          if (j === q.answer && optIdx !== q.answer) {
+            btn.classList.add("correct")
+          }
+        }
+
+        document.getElementById(`q${qIdx}`).classList.add("answered")
+
+        updateStats()
+        updateDots()
+      }
+
+      // ─────────────────────────────────────────────
+      // Navigation
+      // ─────────────────────────────────────────────
+      function navigate(dir) {
+        const next = currentIndex + dir
+
+        if (next < 0 || next >= questions.length) {
+          return
+        }
+
+        goTo(next)
+      }
+
+      function goTo(idx) {
+        highlight(idx)
+
+        currentIndex = idx
+
+        updateNav()
+        updateDots()
+
+        const card = document.getElementById(`q${idx}`)
+
+        card.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        })
+      }
+
+      // ─────────────────────────────────────────────
+      // Highlight Active Card
+      // ─────────────────────────────────────────────
+      function highlight(idx) {
+        document
+          .querySelectorAll(".question-card")
+          .forEach((c) => c.classList.remove("active"))
+
+        document.getElementById(`q${idx}`).classList.add("active")
+      }
+
+      // ─────────────────────────────────────────────
+      // Update Stats
+      // ─────────────────────────────────────────────
+      function updateStats() {
+        const answered = userAnswers.filter((a) => a !== null).length
+
+        const total = questions.length
+
+        document.getElementById("totalCount").textContent = total
+
+        document.getElementById("answeredCount").textContent = answered
+
+        document.getElementById("remainingCount").textContent = total - answered
+
+        document.getElementById("scoreLabel").textContent =
+          `${answered} / ${total} answered`
+
+        document.getElementById("progressBar").style.width =
+          `${(answered / total) * 100}%`
+      }
+
+      // ─────────────────────────────────────────────
+      // Update Navigation
+      // ─────────────────────────────────────────────
+      function updateNav() {
+        document.getElementById("navCurrent").textContent = currentIndex + 1
+
+        document.getElementById("currentLabel").textContent =
+          `#${currentIndex + 1}`
+
+        document.getElementById("prevBtn").disabled = currentIndex === 0
+
+        document.getElementById("nextBtn").disabled =
+          currentIndex === questions.length - 1
+      }
+
+      // ─────────────────────────────────────────────
+      // Update Dots
+      // ─────────────────────────────────────────────
+      function updateDots() {
+        questions.forEach((_, i) => {
+          const dot = document.getElementById(`dot-${i}`)
+
+          dot.className = "dot"
+
+          if (i === currentIndex) {
+            dot.classList.add("current")
+          } else if (userAnswers[i] !== null) {
+            dot.classList.add("answered")
+          }
+        })
+      }
+
+      // ─────────────────────────────────────────────
+      // Init
+      // ─────────────────────────────────────────────
+      loadQuestions()
+    </script>
+  </body>
+</html>
